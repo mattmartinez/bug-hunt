@@ -29,6 +29,8 @@ For each finding, use this exact format:
 - **Category:** [logic | security | error-handling | concurrency | edge-case | performance | data-integrity | type-safety | other]
 - **Claim:** [One-sentence statement of what is wrong — no justification, just the claim]
 - **Evidence:** [Quote the specific code that demonstrates the issue]
+- **What happens:** [Describe the concrete failure mode — what exception is thrown, what data is corrupted, what behavior changes. Be specific about the chain of events.]
+- **Real-world impact:** [How does this manifest in production? Who is affected — end users, operators, other services? How likely is this to actually trigger? What mitigations already exist (e.g., fallback paths, retry logic)?]
 ---
 
 After all findings, output:

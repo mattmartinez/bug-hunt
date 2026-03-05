@@ -45,12 +45,34 @@ Stats:
 - Confirmed as real bugs: [count]
 - Critical: [count] | Medium: [count] | Low: [count]
 
-Confirmed bugs (ordered by severity):
+### Critical
 
-| # | Severity | File | Line(s) | Description | Suggested Fix |
-|---|----------|------|---------|-------------|---------------|
-| BUG-X | Critical | path | lines | description | fix direction |
-| ... | ... | ... | ... | ... | ... |
+For each confirmed Critical bug, use this detailed format:
 
-Low-confidence items (flagged for manual review):
-[List any bugs where your confidence was Medium or Low]
+---
+### BUG-[number] — [short title]
+- **File:** [path:lines]
+- **Fix:** [concrete fix direction]
+- **What happens:** [Describe the concrete failure mode — what exception is thrown, what data is corrupted, what behavior changes. Be specific about the chain of events from trigger to failure.]
+- **Real-world impact:** [How does this manifest in production? Who/what is affected? How likely is it to trigger? What mitigations already exist (fallback paths, retry logic, etc.)?]
+- **Risk if unfixed:** [What is the worst-case scenario if this remains in the codebase? Consider both probability and blast radius.]
+---
+
+### Medium
+
+For each confirmed Medium bug, use the same detailed format as Critical above.
+
+### Low
+
+Low-severity bugs can use a compact table format:
+
+| # | File | Line(s) | Description | Fix |
+|---|------|---------|-------------|-----|
+
+### Low-confidence items (flagged for manual review)
+
+[List any bugs where your confidence was Medium or Low, with a brief note on what would need to be verified]
+
+### Dismissed
+
+[List dismissed bugs with the reason, for transparency]

@@ -56,10 +56,16 @@ Wait for the Referee to complete and capture its full output.
 
 ### Step 5: Present the Final Report
 
-Display the Referee's final verified bug report to the user. Include:
+Display the Referee's final verified bug report to the user. The report must use the detailed format for Critical and Medium bugs — each bug gets its own section with **What happens**, **Real-world impact**, and **Risk if unfixed**. Low-severity bugs can use a compact table.
+
+Include:
 1. The summary stats
-2. The confirmed bugs table (sorted by severity)
-3. Low-confidence items flagged for manual review
-4. A collapsed section with dismissed bugs (for transparency)
+2. Critical bugs (detailed format, each as its own subsection)
+3. Medium bugs (detailed format, each as its own subsection)
+4. Low bugs (compact table)
+5. Low-confidence items flagged for manual review
+6. A collapsed section with dismissed bugs (for transparency)
+
+The detailed descriptions should help the user make informed decisions about which bugs to fix, defer, or accept. Focus on concrete failure modes, not theoretical concerns.
 
 If zero bugs were confirmed, say so clearly — a clean report is a good result.
